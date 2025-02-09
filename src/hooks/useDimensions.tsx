@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 
 export const useDimensions = () => {
   const [dimensionState, setDimensionState] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: 0,
+    height: 0,
   });
 
   const isMobile = dimensionState.width <= 600;
   const isTablet = dimensionState.width > 600 && dimensionState.width <= 900;
 
   useEffect(() => {
-    if (typeof window !== undefined) {
+    if (typeof window !== "undefined") {
       const handleResize = () => {
         setDimensionState({
           width: window.innerWidth,

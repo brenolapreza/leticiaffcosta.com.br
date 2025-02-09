@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "@/public/assets/Logo.svg";
+import Logo from "@/public/Logo.svg";
 import { Menu } from "./components/menu";
 export const Header = () => {
   return (

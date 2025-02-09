@@ -28,7 +28,7 @@ export const Menu = () => {
     return (
       <Menubar className="p-0 bg-transparent border-none shadow-none  flex justify-center items-center data-[state=open]:!bg-transparent">
         <MenubarMenu>
-          <MenubarTrigger className="p-0 hover:bg-transparent focus:bg-transparent focus:border  data-[state=open]:!bg-transparent flex justify-center items-center">
+          <MenubarTrigger className="p-0 hover:bg-transparent focus:bg-transparent focus:border  data-[state=open]:!bg-transparent flex justify-center">
             <AlignJustify className="text-tertiary" />
           </MenubarTrigger>
           <MenubarContent>
