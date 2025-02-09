@@ -20,9 +20,12 @@ import {
 import { useDimensions } from "@/hooks/useDimensions";
 import { AlignJustify } from "lucide-react";
 import { menuLinks } from "./constants/menu-links";
+import { useParams, usePathname } from "next/navigation";
 
 export const Menu = () => {
   const { isMobile } = useDimensions();
+  const params = usePathname();
+  console.log(params);
 
   if (isMobile) {
     return (
@@ -46,10 +49,25 @@ export const Menu = () => {
       <NavigationMenu>
         <NavigationMenuList>
           {menuLinks.map((menu) => (
-            <NavigationMenuItem key={menu.name}>
-              <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+            <NavigationMenuItem
+              key={menu.name}
+              className={`${
+                params === menu.link ? "bg-secondaryColor" : "bg-transparent"
+              }`}
+            >
+              <NavigationMenuTrigger
+                hasArrow={menu.content && menu.content?.length > 0}
+                className="bg-transparent"
+              >
+                {menu.name}
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <NavigationMenuLink>Link</NavigationMenuLink>
+                {menu.content &&
+                  menu.content.map((content) => (
+                    <NavigationMenuLink key={content.name}>
+                      {content.name}
+                    </NavigationMenuLink>
+                  ))}
               </NavigationMenuContent>
             </NavigationMenuItem>
           ))}

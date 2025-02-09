@@ -16,6 +16,9 @@ export default {
         containerMain: "80%",
       },
       colors: {
+        hover: "rgba(0, 0, 0, 0.1)",
+        active: "rgba(0, 0, 0, 0.15)",
+        focus: "#3b82f6",
         main: "#FFF7E9",
         secondaryColor: "#FEAE17",
         tertiary: "#20180B",
@@ -66,7 +69,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        "main-wallpaper": "url('/assets/wallpaper.svg')",
+        "main-wallpaper": "url('/wallpaper.svg')",
       },
     },
   },
