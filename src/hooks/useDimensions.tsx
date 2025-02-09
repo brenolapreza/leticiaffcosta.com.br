@@ -12,18 +12,19 @@ export const useDimensions = () => {
   const isTablet = dimensionState.width > 600 && dimensionState.width <= 900;
 
   useEffect(() => {
-    const handleResize = () => {
-      setDimensionState({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
+    if (typeof window !== undefined) {
+      const handleResize = () => {
+        setDimensionState({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
 
-    // Atualiza na primeira renderização
-    handleResize();
+      handleResize();
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   return {
