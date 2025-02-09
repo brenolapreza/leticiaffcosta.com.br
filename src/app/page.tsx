@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
 import { Tag } from "@/components/tag";
-import Leticia from "@/public/assets/lttc.svg";
+import Leticia from "@/public/lttc.svg";
 import Image from "next/image";
 
 export default function Home() {
