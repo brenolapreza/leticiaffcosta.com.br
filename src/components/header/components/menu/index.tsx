@@ -19,8 +19,8 @@ import {
 
 import { useDimensions } from "@/hooks/useDimensions";
 import { AlignJustify } from "lucide-react";
-import { menuLinks } from "./constants/menu-links";
 import { usePathname } from "next/navigation";
+import { menuLinks } from "./constants/menu-links";
 
 export const Menu = () => {
   const { isMobile } = useDimensions();
@@ -60,14 +60,23 @@ export const Menu = () => {
               >
                 {menu.name}
               </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                {menu.content &&
-                  menu.content.map((content) => (
-                    <NavigationMenuLink key={content.name}>
-                      {content.name}
-                    </NavigationMenuLink>
-                  ))}
-              </NavigationMenuContent>
+              {menu.content && (
+                <NavigationMenuContent className="p-4 w-96">
+                  {menu.content &&
+                    menu.content.map((content) => (
+                      <NavigationMenuLink
+                        href={content.link}
+                        key={content.name}
+                      >
+                        <div className="w-60 p-1 decoration-line">
+                          <span className="p-1 hover:bg-hover rounded transition hover:underline">
+                            {content.name}
+                          </span>
+                        </div>
+                      </NavigationMenuLink>
+                    ))}
+                </NavigationMenuContent>
+              )}
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>
