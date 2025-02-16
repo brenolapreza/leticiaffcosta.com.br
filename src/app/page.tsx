@@ -1,3 +1,6 @@
+"use client";
+
+import { Button } from "@/components/button";
 import { Header } from "@/components/header";
 import { Tag } from "@/components/tag";
 import Leticia from "@/public/lttc.svg";
@@ -22,6 +25,13 @@ export default function Home() {
               para transformar negócios.
             </p>
             <Tag />
+            <Button
+              onClick={() => console.log("click")}
+              buttonType="SECONDARY"
+              className="w-[200px]"
+            >
+              CONHECER
+            </Button>
           </div>
           <Image
             src={Leticia}
