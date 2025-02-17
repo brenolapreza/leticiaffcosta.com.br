@@ -1,8 +1,8 @@
 "use client";
 
 import { Header } from "@/components/header";
-import { FirstSection } from "@/pages/home/sections/first-section";
-import { SecondSection } from "@/pages/home/sections/second-section";
+import FirstSection from "@/pages/home/sections/first-section";
+import SecondSection from "@/pages/home/sections/second-section";
 
 export default function Home() {
   return (

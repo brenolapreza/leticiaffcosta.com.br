@@ -3,7 +3,7 @@ import { Tag } from "@/components/tag";
 import Leticia from "@/public/lttc.svg";
 import Image from "next/image";
 
-export const FirstSection = () => {
+export default function FirstSection() {
   return (
     <section className="container">
       <div className="flex flex-col md:flex-row gap-5 items-center md:items-center w-full">
@@ -42,4 +42,4 @@ export const FirstSection = () => {
       </div>
     </section>
   );
-};
+}

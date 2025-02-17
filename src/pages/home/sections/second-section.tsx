@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export const SecondSection = () => {
+export default function SecondSection() {
   const { isMobile } = useDimensions();
 
   const projects = [
@@ -83,4 +83,4 @@ export const SecondSection = () => {
       </div>
     </section>
   );
-};
+}
