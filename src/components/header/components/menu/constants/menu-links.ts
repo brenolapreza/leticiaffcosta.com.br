@@ -6,6 +6,11 @@ export const menuLinks = [
   {
     name: "Projetos",
     link: "/projects",
+    content: [
+      { name: "Caso de sucesso (Kumon)", link: "/projects/apresentation" },
+      { name: "Campanha natal sem fome", link: "/projects/apresentation" },
+      { name: "Apresentação", link: "/projects/apresentation" },
+    ],
   },
   {
     name: "Sobre mim",

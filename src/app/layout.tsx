@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppinsSans.variable} ${pacificoSans.variable} antialiased bg-main-wallpaper position bg-top bg-cover bg-no-repeat bg-color bg-main text-tertiary`}
+        className={`${poppinsSans.variable} ${pacificoSans.variable} antialiased position bg-top bg-cover bg-no-repeat bg-color bg-main text-tertiary`}
       >
         {children}
       </body>

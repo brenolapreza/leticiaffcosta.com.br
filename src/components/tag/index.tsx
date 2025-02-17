@@ -5,7 +5,7 @@ import { Circle } from "@phosphor-icons/react/dist/ssr";
 export const Tag = () => {
   const { isMobile } = useDimensions();
 
-  const customerSuccess = isMobile ? "CS" : "Customer Success";
+  const customerSuccess = isMobile ? "CSM" : "Customer Success";
 
   return (
     <div className="flex gap-5 items-center  text-center ">
